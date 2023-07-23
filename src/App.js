@@ -12,7 +12,7 @@ function App() {
             <h1>
                 Web app for telegram bot!
             </h1>
-            {app.initData}
+            {app.initDataUnsafe}
         </div>
     );
 }
