@@ -1,14 +1,14 @@
 import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
-import {Button, Row} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 
 
 function App() {
 
-    const {ready, user, onToggleButton} = useTelegram();
+    const {tg, user, onToggleButton} = useTelegram();
 
     useEffect(() => {
-        ready();
+      tg.ready();
     }, [])
     return (
         <div className="App">
