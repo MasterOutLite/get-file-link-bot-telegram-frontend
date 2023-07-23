@@ -1,26 +1,25 @@
 import {useEffect} from "react";
+import {useTelegram} from "./hooks/useTelegram";
+import {Button, Row} from "react-bootstrap";
 
-const app = window.Telegram.WebApp;
 
 function App() {
 
+    const {ready, user, onToggleButton} = useTelegram();
+
     useEffect(() => {
-        app.ready();
+        ready();
     }, [])
     return (
         <div className="App">
             <h1>
                 Web app for telegram bot!
             </h1>
-           <div>
-               {app.initDataUnsafe?.user?.username}
-           </div>
             <div>
-                {
-                    app.initData?.user?.name
-                }
+                {user?.username}
             </div>
 
+            <Button onClick={onToggleButton}>Toggle</Button>
         </div>
     );
 }
