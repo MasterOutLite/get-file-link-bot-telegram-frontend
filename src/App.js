@@ -5,11 +5,11 @@ import {Button} from "react-bootstrap";
 
 function App() {
 
-    const {tg, user, onToggleButton} = useTelegram();
+    const { tg, user, onToggleButton } = useTelegram();
 
     useEffect(() => {
-      tg.ready();
-    }, [])
+        tg.ready();
+    }, )
     return (
         <div className="App">
             <h1>
